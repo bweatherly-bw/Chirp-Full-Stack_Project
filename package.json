@@ -20,6 +20,8 @@
   "homepage": "https://github.com/bweatherly-bw/Full-Stack_Project#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "pg-promise": "^10.11.0"
+    "pg-promise": "^10.11.0",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
   }
 }
