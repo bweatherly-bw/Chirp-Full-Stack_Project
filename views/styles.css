@@ -1,5 +1,3 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<style>
 * {
     margin: 0;
     padding: 0;
@@ -59,19 +57,6 @@
     padding: 0 10px;
   }
   
-  #logoutBtn {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #008CBA;
-  padding: 13px 28px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
-  cursor: crosshair;
-
-  }
   .sidebar {
     border-right: 1px solid var(--twitter-background);
     flex: 0.2;
@@ -254,67 +239,3 @@
     font-weight: 800;
   }
   
-
-</style><h1>Hi <%= name %>,</h1> <br>
-<form action="/logout?_method=DELETE" method="POST"> <br> <br>
-  <button id="logoutBtn" type="submit">Log Out</button>
-</form>
-<!-- <a href="application.html"> HOME </a> -->
-
-
-    <!-- feed starts -->
-    <div class="feed">
-      <div class="feed__header">
-        <h2>Home</h2>
-      </div>
-
-      <!-- tweetbox starts -->
-      <div class="tweetBox">
-        <form>
-          <div class="tweetbox__input" >
-            <img
-              src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
-              alt=""
-            />
-            <input type="text" id="myInput" placeholder="What's Chirping ?" />
-          </div>
-          <button id="chirpButton" onclick="getInputValue()" class="tweetBox__tweetButton">Chirp</button>
-        </form>
-      </div>
-      <!-- tweetbox ends -->
-
-      <!-- post starts -->
-      <div class="card" style="width: 18rem;">
-        <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%= name %></h5>
-          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit sapiente reprehenderit voluptates aliquid explicabo. Velit provident aliquid illum, ex nesciunt voluptatibus mollitia dolore similique accusantium, accusamus autem dolores ipsam.</p>
-          <a href="#" class="btn btn-primary">LIKE</a>
-          <!-- <a href="#" class="btn btn-primary">SHARE</a> -->
-        </div>
-      </div>
-
-      <div id="chrips-container" class="row results">
-
-
-      <script>
-
-        function getInputValue() {
-          let inputVal = document.getElementById("myInput").value;
-          let chrip_container = document.getElementById('chrips-container');
-          chrip_container.innerHTML = getInputValue;
-
-          // alert(inputVal)
-          console.log('onclick')
-          return `
-            <div class="card" style="width: 18rem;">
-            <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" class="card-img-top" alt="...">
-            <div class="card-body">
-            <h5 class="card-title"><%= name %></h5>
-            <p class="card-text"></p>
-            <a href="#" class="btn btn-primary">LIKE</a>
-          </div>
-        </div>
-          `
-      };
-      </script>
