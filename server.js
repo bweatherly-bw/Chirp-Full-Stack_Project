@@ -18,9 +18,8 @@ if (process.env.NODE_ENV !== 'production') {
   )
   
   const users = []
-  // Chirps var is an option to store tweets locally if we do not have time to fully set up the DB. 
-  const chirps = []
-  
+  const chrips = []
+
   app.set('view-engine', 'ejs')
   app.use(express.urlencoded({ extended: false }))
   app.use(flash())
@@ -40,6 +39,8 @@ if (process.env.NODE_ENV !== 'production') {
   app.get('/login', checkNotAuthenticated, (req, res) => {
     res.render('login.ejs')
   })
+
+  // Upon login, get users Chirps
   
   app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
     successRedirect: '/',
