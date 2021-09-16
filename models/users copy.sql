@@ -1,0 +1,10 @@
+insert into users (user_email, user_password, user_name) values ('oscar@oscar.com', 'Oscar123', 'Oscar');
+insert into users (user_email, user_password, user_name) values ('josh@josh.com', 'Josh123', 'Josh');
+insert into users (user_email, user_password, user_name) values ('chris@chris.com', 'Chris123', 'Chris');
+insert into users (user_email, user_password, user_name) values ('lilly@lilly.com', 'Lilly123', 'Lilly');
+insert into users (user_email, user_password, user_name) values ('raymond@raymond.com', 'Raymond123', 'Raymond');
+insert into users (user_email, user_password, user_name) values ('billy@billy.com', 'Billy123', 'Billy');
+insert into users (user_email, user_password, user_name) values ('amanda@amanda.com', 'Amanda123', 'Amanda');
+insert into users (user_email, user_password, user_name) values ('toby@toby.com', 'Toby123', 'Toby');
+insert into users (user_email, user_password, user_name) values ('rebecca@rebecca.com', 'Rebecca123', 'Rebecca');
+insert into users (user_email, user_password, user_name) values ('amber@amber.com', 'Amber123', 'Amber');
