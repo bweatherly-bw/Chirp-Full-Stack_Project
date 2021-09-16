@@ -17,6 +17,12 @@
           --twitter-color: #50b7f5;
           --twitter-background: #e6ecf0;
         }
+
+        .card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
         
         .sidebarOption {
           display: flex;
@@ -294,18 +300,6 @@
       </div>
       <!-- tweetbox ends -->
 
-      <!-- post starts -->
-        <!-- <div class= col-4 movie mb-4>
-      <div class="card" style="width: 18rem;">
-        <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%= name %></h5>
-          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit sapiente reprehenderit voluptates aliquid explicabo. Velit provident aliquid illum, ex nesciunt voluptatibus mollitia dolore similique accusantium, accusamus autem dolores ipsam.</p>
-          <a href="#" class="btn btn-primary">LIKE</a> -->
-          <!-- <a href="#" class="btn btn-primary">SHARE</a> -->
-        <!-- </div>
-      </div>
-    </div> -->
       <div id="chrips-container" class="row results">
 
         <script>
@@ -313,19 +307,21 @@
             e.preventDefault();
             let inputVal = document.getElementById("myInput").value;
             let card = `
-              <div class="card" style="width: 18rem;">
+            <div class= col-12>
+              <div class="card" style="width: 22rem;">
               <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" class="card-img-top" alt="...">
               <div class="card-body">
               <h5 class="card-title"><%= name %></h5>
               <p class="card-text">${inputVal}</p>
-              <a href="#" class="btn btn-primary">LIKE</a>
+              
             </div>
+          </div>
           </div>
             `
             let chrip_container = document.getElementById('chrips-container');
             chrip_container.innerHTML += card;
           })
-
+            // <a href="#" class="btn btn-primary">LIKE</a> <-- Line 309 -- moving here to place the like function on hold 
         </script>
       </body>
 </html>
