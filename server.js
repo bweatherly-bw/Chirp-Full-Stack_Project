@@ -9,6 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
   const flash = require('express-flash')
   const session = require('express-session')
   const methodOverride = require('method-override')
+  const DB = require('./models')
   
   const initializePassport = require('./passport-config')
   initializePassport(
@@ -55,11 +56,10 @@ if (process.env.NODE_ENV !== 'production') {
   app.post('/register', checkNotAuthenticated, async (req, res) => {
     try {
       const hashedPassword = await bcrypt.hash(req.body.password, 10)
-      users.push({
-        id: Date.now().toString(),
-        name: req.body.name,
-        email: req.body.email,
-        password: hashedPassword
+      users.db.users.create ({
+        user_name: req.body.name,
+        user_email: req.body.email,
+        user_password: hashedPassword
       })
       res.redirect('/login')
     } catch {
@@ -87,5 +87,7 @@ if (process.env.NODE_ENV !== 'production') {
     next()
   }
   
-  app.listen(3000)
+  app.listen(3000,()=>{
+    console.log("listen")
+  })
   

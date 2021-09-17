@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.posts.belongsTo(models.user_id)
-      models.posts.hasMany(models.exports,{
+      
+      models.posts.hasMany(models.likes,{
         foreignKey:{
           name:'post_id',
         allowedNull:false
@@ -24,7 +24,8 @@ module.exports = (sequelize, DataTypes) => {
   posts.init({
     user_id: DataTypes.STRING,
     user_name: DataTypes.STRING,
-    text: DataTypes.STRING
+    text: DataTypes.STRING,
+    post_id: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'posts',
