@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": "Weatherly19",
+    "password": "",
     "database": "twitter_clone",
     "host": "127.0.0.1",
     "dialect": "postgres"
